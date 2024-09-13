@@ -1,0 +1,11 @@
+{
+  "homepage": "https://github.com/shabnam777/flutter-test-app",
+  "scripts": {
+    "deploy": "gh-pages -d build/web"
+  },
+  "name": "image-gallery",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
