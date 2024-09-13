@@ -14,11 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # # Set up Flutter
-      # - name: Set up Flutter
-      #   uses: subosito/flutter-action@v2
-      #   with:
-      #     flutter-version: 'stable'  # Replace with your Flutter version
+      # Set up Flutter
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.5.0'  # Replace with your Flutter version
 
       # Install dependencies
       - name: Install dependencies
