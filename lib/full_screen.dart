@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -48,14 +46,12 @@ class FullScreenImage extends StatelessWidget {
                 icon: const Icon(Icons.close, color: Colors.white),
                 onPressed: () {
                   if (!kIsWeb) {
-                    if (Platform.isAndroid || Platform.isIOS) {
-                      // Mobile-specific pop behavior
-                      Navigator.of(context).pop();
-                    } else if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
-                      // Desktop-specific pop behavior
-                      Navigator.of(context).pop(); // Adjust here as needed
+                    print("mobile");
+                    if (Navigator.canPop(context)) {
+                      Navigator.maybePop(context);
                     }
                   } else {
+                    print('web');
                     Navigator.of(context).pop();
                     Navigator.of(context).pop();
                   }
