@@ -47,6 +47,7 @@ class FullScreenImage extends StatelessWidget {
                 onPressed: () {
                   if (!kIsWeb) {
                     print("mobile");
+                    _showPopup(context, true);
                     if (Navigator.canPop(context)) {
                       Navigator.maybePop(context);
                     }
